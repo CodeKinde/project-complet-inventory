@@ -17,7 +17,7 @@
             <div class="col-12">
                 <div class="card">
         <div class="card-body">
-            <a href="{{ route('unit.add') }}" style="float: right" class="btn btn-rounded btn-dark waves-effect waves-light btn-sm">Nouveau Unit</a>
+            <a href="{{ route('unit.add') }}" style="float: right" class="btn btn-rounded btn-dark waves-effect waves-light btn-sm">Nouveau Unit</a><br/>
             <h4 class="card-title">Données Unités
                 <span class="badge rounded-pill bg-danger">{{ count($units) }} units</span>
             </h4>

@@ -17,7 +17,7 @@
             <div class="col-12">
                 <div class="card">
         <div class="card-body">
-            <a href="{{ route('supplier.add') }}" style="float: right" class="btn btn-rounded btn-dark waves-effect waves-light btn-sm">Nouveau Fournisseur</a>
+            <a href="{{ route('supplier.add') }}" style="float: right" class="btn btn-rounded btn-dark waves-effect waves-light btn-sm">Nouveau Fournisseur</a><br/>
             <h4 class="card-title">Données Fournisseur
                 <span class="badge rounded-pill bg-danger">{{ count($suppliers) }} Frs</span>
             </h4>

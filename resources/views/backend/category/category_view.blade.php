@@ -17,7 +17,7 @@
             <div class="col-12">
                 <div class="card">
         <div class="card-body">
-            <a href="{{ route('category.add') }}" style="float: right" class="btn btn-rounded btn-dark waves-effect waves-light btn-sm">Nouveau Category</a>
+            <a href="{{ route('category.add') }}" style="float: right" class="btn btn-rounded btn-dark waves-effect waves-light btn-sm">Nouveau Category</a><br/>
             <h4 class="card-title">Données Category
                 <span class="badge rounded-pill bg-danger">{{ count($category) }} catgrs</span>
             </h4>

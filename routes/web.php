@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\CustomerController;
 use App\Http\Controllers\Backend\ProductController;
+use App\Http\Controllers\Backend\PurchaseController;
 use App\Http\Controllers\Backend\SupplierController;
 use App\Http\Controllers\Backend\UnitController;
 use App\Http\Controllers\ProfileController;
@@ -78,6 +79,16 @@ Route::controller(CategoryController::class)->group(function(){
 Route::controller(ProductController::class)->group(function(){
     Route::get('/product/view','ProductView')->name('product.view');
     Route::get('/product/add','ProductAdd')->name('product.add');
+    Route::post('/product/store','ProductStore')->name('product.store');
+    Route::get('/product/edit/{id}','ProductEdit')->name('product.edit');
+    Route::post('/product/update/{id}','ProductUpdate')->name('product.update');
+    Route::get('/product/delete/{id}','ProductDelete')->name('product.delete');
+});
+
+//Product all Route
+Route::controller(PurchaseController::class)->group(function(){
+    Route::get('/purchase/view','PurchaseView')->name('purchase.view');
+    Route::get('/purchase/add','PurchaseAdd')->name('purchase.add');
     Route::post('/product/store','ProductStore')->name('product.store');
     Route::get('/product/edit/{id}','ProductEdit')->name('product.edit');
     Route::post('/product/update/{id}','ProductUpdate')->name('product.update');
