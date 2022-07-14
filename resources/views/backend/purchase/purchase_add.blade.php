@@ -1,7 +1,7 @@
 @extends('admin.admin_master')
 @section('content')
 @section('title')
-add |category
+add |achat
 @endsection
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
@@ -72,4 +72,45 @@ add |category
 </div> <!-- end col -->
 </div>
     </div>
+<script type="text/javascript">
+$(function(){
+ $(document).on('change',"#supplier_id",function(){
+    var supplier_id = $(this).val();
+    $.ajax({
+        type:"GET",
+        url:"{{ route('get-category') }}",
+        data:{supplier_id:supplier_id},
+        success:function(data){
+         var html = '<option value="">Select Categories</option>';
+         $.each(data, function(key,v){
+            html +='<option value="'+v.category_id+'">'+v.category.name+'</option>';
+         });
+         $('#category_id').html(html);
+        }
+    })
+ });
+});
+
+</script>
+
+<script type="text/javascript">
+$(function(){
+    $(document).on('change','#category_id',function(){
+        var category_id = $(this).val();
+        $.ajax({
+            type:"GET",
+            url:"{{ route('get-product') }}",
+            data:{category_id:category_id},
+            success:function(data){
+             var html = '<option value="">Select Category</option>';
+             $.each(data,function(key,v){
+                html +='<option value="'+v.id+'">'+v.name+'</option>';
+             })
+             $('#product_id').html(html);
+            }
+        })
+    });
+});
+
+</script>
 @endsection

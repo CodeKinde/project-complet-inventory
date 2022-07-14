@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\CustomerController;
+use App\Http\Controllers\Backend\DefaultController;
 use App\Http\Controllers\Backend\ProductController;
 use App\Http\Controllers\Backend\PurchaseController;
 use App\Http\Controllers\Backend\SupplierController;
@@ -89,10 +90,14 @@ Route::controller(ProductController::class)->group(function(){
 Route::controller(PurchaseController::class)->group(function(){
     Route::get('/purchase/view','PurchaseView')->name('purchase.view');
     Route::get('/purchase/add','PurchaseAdd')->name('purchase.add');
-    Route::post('/product/store','ProductStore')->name('product.store');
-    Route::get('/product/edit/{id}','ProductEdit')->name('product.edit');
-    Route::post('/product/update/{id}','ProductUpdate')->name('product.update');
-    Route::get('/product/delete/{id}','ProductDelete')->name('product.delete');
+
+});
+//supplier get category
+Route::controller(DefaultController::class)->group(function(){
+    Route::get('/get-category','GetCategory')->name('get-category');
+    Route::get('/get-product','GetProduct')->name('get-product');
+
+
 });
 
 Route::get('/dashboard', function () {
