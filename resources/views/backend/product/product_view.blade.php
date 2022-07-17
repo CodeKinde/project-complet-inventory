@@ -17,7 +17,8 @@
             <div class="col-12">
                 <div class="card">
         <div class="card-body">
-            <a href="{{ route('product.add') }}" style="float: right" class="btn btn-rounded btn-dark waves-effect waves-light btn-sm">Nouveau Produit</a><br/>
+            <a href="{{ route('product.add') }}" style="float: right" class="btn btn-rounded btn-dark waves-effect waves-light btn-sm"><i class=" fas fa-plus-circle
+                "></i> Nouveau Produit</a><br/>
             <h4 class="card-title">Données Produits
                 <span class="badge rounded-pill bg-danger">{{ count($products) }} Prds</span>
             </h4>

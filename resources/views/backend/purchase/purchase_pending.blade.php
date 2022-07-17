@@ -1,13 +1,13 @@
 @extends('admin.admin_master')
 @section('title')
- all purchases
+ all purchase pending
 @endsection
 @section('content')
   <div class="container-fluid">
     <div class="row">
         <div class="col-12">
             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                <h4 class="mb-sm-0">Liste des Achats</h4>
+                <h4 class="mb-sm-0">Liste des Achats En attente</h4>
 
             </div>
         </div>
@@ -55,7 +55,7 @@
                     </td>
                     <td width="5%">
                     @if($item->status == 0)
- <a href="{{ route('purchase.delete',$item->id) }}" class="btn btn-danger" id="delete"><i class="fa fa-trash"></i></a>
+ <a href="{{ route('purchase.approve',$item->id) }}" class="btn btn-danger" id="approvedBtn" title="Approuvé"><i class="fa fa-check-circle"></i></a>
                     @endif
 
                     </td>

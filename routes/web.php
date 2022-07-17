@@ -90,7 +90,10 @@ Route::controller(ProductController::class)->group(function(){
 Route::controller(PurchaseController::class)->group(function(){
     Route::get('/purchase/view','PurchaseView')->name('purchase.view');
     Route::get('/purchase/add','PurchaseAdd')->name('purchase.add');
-
+    Route::post('/purchase/store','PurchaseStore')->name('purchase.store');
+    Route::get('/purchase/delete/{id}','PurchaseDelete')->name('purchase.delete');
+    Route::get('/purchase/pending','PurchasePending')->name('purchase.pending');
+    Route::get('/purchase/pending/approve/{id}','PurchaseApprove')->name('purchase.approve');
 });
 //supplier get category
 Route::controller(DefaultController::class)->group(function(){

@@ -66,7 +66,9 @@
                         <span>Gerer Achat</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('purchase.view') }}">Achats</a></li>
+                        <li><a href="{{ route('purchase.view') }}">Tous Les Achats</a></li>
+
+                        <li><a href="{{ route('purchase.pending') }}">Acceptation des achats</a></li>
                     </ul>
                 </li>
 
