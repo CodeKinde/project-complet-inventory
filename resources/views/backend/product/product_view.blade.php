@@ -30,6 +30,7 @@
                     <th>Unité</th>
                     <th>Categories</th>
                     <th>Produit</th>
+                    <th>Quantité</th>
                     <th>Action</th>
                 </tr>
                 </thead>
@@ -40,7 +41,8 @@
                     <td>{{ $item['supplier']['prenom'] }} {{ $item['supplier']['nom'] }}</td>
                     <td>{{ $item['unit']['name'] }}</td>
                     <td>{{ $item['category']['name'] }}</td>
-                    <td width="40%">{{ $item->name }}</td>
+                    <td width="35%">{{ $item->name }}</td>
+                    <td>{{ $item->quantity }}</td>
                     <td width="15%">
  <a href="{{ route('product.edit',$item->id) }}" class="btn btn-info"><i class="fa fa-edit"></i></a>
 <a href="{{ route('product.delete',$item->id) }}" class="btn btn-danger" id="delete"><i class="fa fa-trash"></i></a>

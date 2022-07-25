@@ -170,7 +170,7 @@ $(function(){
     <td>
         <input type="number" class="form-control unit_price text-right" name="unit_price[]" value="">
     </td>
- <td>
+     <td>
         <input type="text" class="form-control" name="description[]">
     </td>
      <td>

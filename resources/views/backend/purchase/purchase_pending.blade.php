@@ -7,7 +7,7 @@
     <div class="row">
         <div class="col-12">
             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                <h4 class="mb-sm-0">Liste des Achats En attente</h4>
+                <h4 class="mb-sm-0">Tout les Achats En attente</h4>
 
             </div>
         </div>
@@ -18,7 +18,7 @@
                 <div class="card">
         <div class="card-body">
             <a href="{{ route('purchase.add') }}" style="float: right" class="btn btn-rounded btn-dark waves-effect waves-light btn-sm"><i class=" fas fa-plus-circle
-                "></i> Nouveau Achat</a><br/>
+                "></i> Ajouter Achat</a><br/>
             <h4 class="card-title">Données Achats
                 <span class="badge rounded-pill bg-danger">{{ count($purchases) }} BC</span>
             </h4>

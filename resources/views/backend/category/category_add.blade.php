@@ -37,7 +37,6 @@ add |category
                name:{
                 required:true,
                },
-
             },
             messages:{
                 name:{

@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\CustomerController;
 use App\Http\Controllers\Backend\DefaultController;
+use App\Http\Controllers\Backend\InvoiceController;
 use App\Http\Controllers\Backend\ProductController;
 use App\Http\Controllers\Backend\PurchaseController;
 use App\Http\Controllers\Backend\SupplierController;
@@ -99,7 +100,26 @@ Route::controller(PurchaseController::class)->group(function(){
 Route::controller(DefaultController::class)->group(function(){
     Route::get('/get-category','GetCategory')->name('get-category');
     Route::get('/get-product','GetProduct')->name('get-product');
+    Route::get('/check-product','GetStock')->name('check-stock-product');
 
+});
+
+//invoice  Route All
+Route::controller(InvoiceController::class)->group(function(){
+
+    Route::get('/invoice/all','InvoiceAll')->name('invoice.all');
+
+    Route::get('/invoice/add','InvoiceAdd')->name('invoice.add');
+
+    Route::post('/invoice/store','InvoiceStore')->name('invoice.store');
+
+    Route::get('/invoice/pending/list','InvoicePendingList')->name('invoice.pending.list');
+
+    Route::get('/invoice/pending/delete/{id}','InvoiceDelete')->name('invoice.delete');
+
+    Route::get('/invoice/pending/approve/{id}','InvoiceApprove')->name('invoice.approve');
+
+    Route::post('/approval/store/{id}','ApprovalStore')->name('approval.store');
 
 });
 

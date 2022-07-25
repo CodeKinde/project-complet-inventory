@@ -18,7 +18,7 @@
                 <div class="card">
         <div class="card-body">
             <a href="{{ route('customer.add') }}" style="float: right" class="btn btn-rounded btn-dark waves-effect waves-light btn-sm"><i class=" fas fa-plus-circle
-                "></i> Nouveau Client</a><br/>
+                "></i> Ajouter Client</a><br/>
             <h4 class="card-title">Données Clients
                 <span class="badge rounded-pill bg-danger">{{ count($customers) }} Clts</span>
             </h4>
