@@ -49,7 +49,7 @@
                       <th class="text-center">SL</th>
                       <th class="text-center">Categorie</th>
                       <th class="text-center">Nom produit</th>
-                      <th class="text-center" style="background-color: #8B008B">Stock actuel</th>
+                      <th class="text-center" style="background-color: #8B008B">Stocke actuel</th>
                       <th class="text-center">Quantité</th>
                       <th class="text-center">Prix Unité</th>
                       <th class="text-center">Prix Total</th>
@@ -95,12 +95,12 @@
                     </tr>
 
                     <tr>
-                        <td colspan="6">Montant  Payé</td>
+                        <td colspan="6">Payé</td>
                         <td>${{ $payment->paid_amount}}</td>
                     </tr>
 
                     <tr>
-                        <td colspan="6">Montant Due</td>
+                        <td colspan="6">Due</td>
                         <td>${{ $payment->due_amount}}</td>
                     </tr>
 

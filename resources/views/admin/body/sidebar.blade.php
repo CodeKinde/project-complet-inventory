@@ -73,6 +73,13 @@
                         <li><a href="{{ route('invoice.all') }}">Tous Les Factures</a></li>
 
                         <li><a href="{{ route('invoice.pending.list') }}">Approvation Facture</a></li>
+
+                        <li><a href="{{ route('print.invoice.list') }}">Imprimer la liste des factures
+                        </a></li>
+
+                        <li><a href="{{ route('daily.invoice.report') }}">Rapport de facturation quotidien
+                        </a></li>
+
                     </ul>
                 </li>
 

@@ -1,5 +1,5 @@
 @php
-    $user = DB::table('users',Auth::id())->first();
+    $user = DB::table('users')->where('id',Auth::user()->id)->first();
 @endphp
 <header id="page-topbar">
     <div class="navbar-header">
