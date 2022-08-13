@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\DB;
 
 class InvoiceController extends Controller
 {
+
     public function InvoiceAll(){
         $data['allData'] = Invoice::where('status','1')->orderBy('date','desc')->orderBy('id','desc')->get();
         return view('backend.invoice.invoice_all',$data);

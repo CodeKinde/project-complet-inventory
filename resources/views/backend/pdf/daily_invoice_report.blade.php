@@ -1,7 +1,7 @@
 @extends('admin.admin_master')
 @section('content')
 @section('title')
-daily |invoice
+daily |invoice report
 @endsection
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
@@ -82,7 +82,7 @@ $(document).ready(function(){
 
             $(element).addClass('is-invalid');
         },
-        unhighlight: function(element,errorClass, element){
+        unhighlight: function(element,errorClass, validClass){
 
             $(element).removeClass('is-invalid')
         }

@@ -7,6 +7,7 @@ use App\Http\Controllers\Backend\DefaultController;
 use App\Http\Controllers\Backend\InvoiceController;
 use App\Http\Controllers\Backend\ProductController;
 use App\Http\Controllers\Backend\PurchaseController;
+use App\Http\Controllers\Backend\StockController;
 use App\Http\Controllers\Backend\SupplierController;
 use App\Http\Controllers\Backend\UnitController;
 use App\Http\Controllers\ProfileController;
@@ -128,6 +129,15 @@ Route::controller(InvoiceController::class)->group(function(){
     Route::get('/daily/invoice/report','DailyInvoiceReport')->name('daily.invoice.report');
 
     Route::get('/daily/invoice/pdf','DailyInvoicePdf')->name('daily.invoice.pdf');
+
+});
+
+//all route Stock controller
+Route::controller(StockController::class)->group(function(){
+
+    Route::get('/stock/report','StockReport')->name('stock.report');
+    Route::get('/stock/report/pdf','StockReportPdf')->name('stock.report.pdf');
+
 
 });
 
